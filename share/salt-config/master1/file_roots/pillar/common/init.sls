@@ -3,12 +3,12 @@ tomcat:
     instances:
       i1:
         id: 1
-        cur_version: 8.0.40
-        source: 'salt://misc/apache-tomcat-8.0.40.tar.gz'
+        cur_version: 8.0.20
+        source: 'salt://misc/apache-tomcat-8.0.20.tar.gz'
         source_hash: md5=9a3dacfbe9644d7a23699b4aa9f648df
         versions:
-          '8_0_40':
-            version: 8.0.40
+          '8_0_20':
+            version: 8.0.20
             settings:
               users:
                 plain: |
