@@ -48,6 +48,15 @@ Testing Jenkins Job Builder
     # salt-call test.version
     # salt-call -l debug state.sls repos,users,git,tools,sysctl,java,tomcat test=False
 
+Go to ``http://10.10.11.100:18080/jenkins/`` enable security, add a local user test:test.
+
+    # git clone https://git.openstack.org/openstack-infra/jenkins-job-builder
+    # cd jenkins-job-builder/
+    # python setup.py install
+    # pip install pbr
+    # cd /vagrant/share/misc/jenkins_job_builder/
+    # jenkins-jobs --conf=config.ini update myproject/
+
 
 Additional resources
 --------------------
