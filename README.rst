@@ -62,7 +62,7 @@ Go to ``http://10.10.11.100:18080/jenkins/`` enable security, add a local user t
 Additional resources
 --------------------
 
-Please see https://github.com/bechtoldt/vagrant-devenv for some more bits of information about the vagrant VM.
+Please see https://github.com/bechtoldt/vagrant-devenv for some more bits of information about the vagrant VM. You can use it to build the Vagrant box mention above (``DEV_Debian_78_salt_arbe_git-virtualbox-CURRENT.box``), too.
 
 
 TODO
