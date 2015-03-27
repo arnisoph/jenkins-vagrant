@@ -1,0 +1,43 @@
+---
+defaults:
+  domain: jenkins.local.arnoldbechtoldt.com
+  osfam: debian
+  base_box: DEV_Debian_78_salt_arbe_git-virtualbox-CURRENT.box
+  base_box_basedir: ../share
+  synced_folders:
+    - src: assets/scripts/provision
+      dst: /vagrant/scripts
+    - src: ../saltstack-assets/salt-modules/_modules
+      dst: /vagrant/salt/_modules
+    - src: ../saltstack-assets/salt-modules/_states
+      dst: /vagrant/salt/_states
+    - src: ../share/misc
+      dst: /vagrant/share/misc
+    - src: ../share/salt-config
+      dst: /vagrant/share/salt-config
+nodes:
+  master1:
+    provision:
+      - name: basic
+      - name: saltstack_formulas
+        formulas:
+          - name: java
+            base_dir: ../saltstack-assets/saltstack-java-formula
+          - name: repos
+            base_dir: ../saltstack-assets/saltstack-repos-formula
+          - name: time
+            base_dir: ../saltstack-assets/saltstack-time-formula
+          - name: git
+            base_dir: ../saltstack-assets/saltstack-git-formula
+          - name: vim
+            base_dir: ../saltstack-assets/saltstack-vim-formula
+          - name: tools
+            base_dir: ../saltstack-assets/saltstack-tools-formula
+          - name: sysctl
+            base_dir: ../saltstack-assets/saltstack-sysctl-formula
+          - name: tomcat
+            base_dir: ../saltstack-assets/saltstack-tomcat-formula
+          - name: users
+            base_dir: ../saltstack-assets/saltstack-users-formula
+      - name: saltstack_config
+      - name: saltstack_services

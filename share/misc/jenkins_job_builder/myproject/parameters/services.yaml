@@ -1,0 +1,7 @@
+- parameter:
+    name: PARAMETERS_SERVICES
+    parameters:
+      - bool:
+          name: restart_tomcat
+          default: True
+          description: Restart Tomcat

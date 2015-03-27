@@ -1,0 +1,17 @@
+- defaults:
+    name: global
+    project: myproject
+    description: |
+        <p>
+          <span style="color:red;font-weight:bold;">Do not edit this job manually, use <a href="https://gitlab.example.com">jenkins-job-builder</a> instead! Any manual changes will be OVERRIDEN!</span>
+        </p>
+- scm: # require jenkins git plugin
+    name: rex-myproject
+    scm:
+      - git:
+          url: "gitlab@gitlab.example.com:organization/rex.git"
+          credentials-id: see_jenkins_global_config
+          skip-tag: True
+          wipe-workspace: False
+          branches:
+            - "*/master"

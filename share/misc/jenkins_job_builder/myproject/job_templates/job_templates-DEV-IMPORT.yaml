@@ -1,0 +1,26 @@
+- job-template:
+    name: "{name}-DEV-IMPORTER"
+    display-name: "{name}-{env_short_upper}-IMPORTER"
+    description: |
+        {description}
+    auth-token: !include-raw myproject/private/auth_token
+    parameters:
+      - PARAMETERS_IMPORTER
+    scm:
+      - rex-myproject
+    wrappers:
+      - ansicolor:
+          colormap: xterm
+    builders:
+      - shell: !include-raw builders/build-importer.sh
+    project-type: freestyle
+    defaults: global
+    disabled: false
+    concurrent: false
+    block-downstream: false
+    block-upstream: false
+    logrotate:
+      daysToKeep: -1
+      numToKeep: 15
+      artifactDaysToKeep: -1
+      artifactNumToKeep: -1

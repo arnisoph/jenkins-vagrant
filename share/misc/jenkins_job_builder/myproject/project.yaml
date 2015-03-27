@@ -1,0 +1,23 @@
+- project:
+    name: myproject
+    jobs:
+      - "{name}-DEV-SERVICE":
+          env_short_upper: DEV
+          env_short_lower: dev
+          env_puppet: development
+          project_app: myproject_web
+      - "{name}-DEV-IMPORTER":
+          env_short_upper: DEV
+          env_short_lower: dev
+          env_puppet: development
+          project_app: myproject_importer
+      - "{name}-PROD-SERVICE":
+          env_short_upper: PROD
+          env_short_lower: prod
+          env_puppet: production
+          project_app: myproject_web
+      - "{name}-PROD-IMPORTER":
+          env_short_upper: PROD
+          env_short_lower: prod
+          env_puppet: production
+          project_app: myproject_importer
