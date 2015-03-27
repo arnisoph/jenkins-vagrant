@@ -17,6 +17,7 @@ defaults:
       dst: /vagrant/share/salt-config
 nodes:
   master1:
+    ip: 10.10.11.100
     provision:
       - name: basic
       - name: saltstack_formulas
