@@ -3,12 +3,12 @@ tomcat:
     instances:
       i1:
         id: 1
-        cur_version: 8.0.20
-        source: 'salt://misc/apache-tomcat-8.0.20.tar.gz'
+        cur_version: 8.0.40
+        source: 'salt://misc/apache-tomcat-8.0.40.tar.gz'
         source_hash: md5=9a3dacfbe9644d7a23699b4aa9f648df
         versions:
-          '8_0_20':
-            version: 8.0.20
+          '8_0_40':
+            version: 8.0.40
             settings:
               users:
                 plain: |
@@ -79,12 +79,11 @@ java:
   lookup:
     manage:
       jdk:
-        current_ver: 8u20
+        current_ver: 8u40
         versions:
-          8u20:
-            source: salt://misc/jdk-8u20-linux-x64.tar.gz
-            source_hash: md5=ec7f89dc3697b402e2c851d0488f6299
-            version: jdk1.8.0_20
+          8u40:
+            source: salt://misc/jdk-8u40-linux-x64.tar.gz
+            version: jdk1.8.0_40
 
 
 sysctl:
