@@ -25,3 +25,6 @@
 [submodule "saltstack-assets/saltstack-users-formula"]
 	path = saltstack-assets/saltstack-users-formula
 	url = https://github.com/bechtoldt/saltstack-users-formula.git
+[submodule "vagrant"]
+	path = vagrant
+	url = https://github.com/bechtoldt/iac-vagrant.git
