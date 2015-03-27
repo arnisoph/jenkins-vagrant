@@ -50,6 +50,8 @@ Testing Jenkins Job Builder
 
 Go to ``http://10.10.11.100:18080/jenkins/`` enable security, add a local user test:test.
 
+::
+
     # git clone https://git.openstack.org/openstack-infra/jenkins-job-builder
     # cd jenkins-job-builder/
     # python setup.py install
