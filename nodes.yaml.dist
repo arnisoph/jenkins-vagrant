@@ -2,17 +2,21 @@
 defaults:
   domain: jenkins.local.arnoldbechtoldt.com
   osfam: debian
-  base_box: DEV_Debian_78_salt_arbe_git-virtualbox-CURRENT.box
-  base_box_basedir: ../share
+  base_box: bechtoldt/debian-7.9-salt-2015.8.0
   synced_folders:
+    # Common folders
+    - src: ../shared/misc
+      dst: /vagrant/shared/misc
+
+    # Salt related folders
+    - src: ../shared/salt/devenv
+      dst: /vagrant/shared/salt/devenv
+    #- src: ../../github/salt
+    #  dst: /vagrant/src/salt
     - src: ../saltstack-assets/salt-modules/_modules
       dst: /vagrant/salt/_modules
     - src: ../saltstack-assets/salt-modules/_states
       dst: /vagrant/salt/_states
-    - src: ../share/misc
-      dst: /vagrant/share/misc
-    - src: ../share/salt-config
-      dst: /vagrant/share/salt-config
 nodes:
   master1:
     ip: 10.10.11.100

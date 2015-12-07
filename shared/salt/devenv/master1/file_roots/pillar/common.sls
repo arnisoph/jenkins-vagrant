@@ -25,9 +25,10 @@ tomcat:
               setenv:
                 contents: |
                   export \
-                  JAVA_OPTS="-Xms128m -Xmx128m" \
                   JAVA_HOME=/opt/java/jdk/current/src/ \
                   JAVA_OPTS="\
+                    -Xms128m \
+                    -Xmx128m \
                     -Djava.net.preferIPv4Stack=true \
                     -Dhudson.DNSMultiCast.disabled=true \
                     "
@@ -85,7 +86,6 @@ java:
             source: salt://misc/jdk-8u40-linux-x64.tar.gz
             version: jdk1.8.0_40
 
-
 sysctl:
   params:
     - name: vm.swappiness
@@ -94,21 +94,11 @@ sysctl:
 tools:
   manage:
     bzip: {}
-    colordiff: {}
     curl: {}
     ed: {}
     gzip: {}
-    haveged: {}
-    htop: {}
     less: {}
-    logrotate: {}
-    rsync: {}
-    screen: {}
-    sed: {}
     tar: {}
     tree: {}
-    tzdata: {}
-    unzip: {}
     wget: {}
     zip: {}
-    moreutils: {}
