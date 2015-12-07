@@ -36,7 +36,7 @@ Testing Jenkins Job Builder
 
     $ git clone git@github.com:bechtoldt/jenkins-vagrant.git --recursive
     $ cd jenkins-vagrant/
-    $ wget http://jenkins.mirror.isppower.de/war/1.606/jenkins.war -O shared/misc/jenkins.war
+    $ wget http://mirrors.jenkins-ci.org/war-stable/1.625.2/jenkins.war -O shared/misc/jenkins-1.625.2.war
     $ wget http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.20/bin/apache-tomcat-8.0.20.tar.gz -O shared/misc/apache-tomcat-8.0.20.tar.gz
     $ wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u40-b26/jdk-8u40-linux-x64.tar.gz -O shared/misc/jdk-8u40-linux-x64.tar.gz
 

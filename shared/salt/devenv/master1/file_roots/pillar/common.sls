@@ -55,9 +55,9 @@ tomcat:
                 war:
                   deployment_type: manager
                   url: 'http://127.0.0.1:18080/manager'
-                  source: 'salt://misc/jenkins.war'
                   #source: 'http://mirrors.jenkins-ci.org/war/latest/jenkins.war'
-                  source_hash: sha512=c742ee5c4c3bdd37a12a7e5f78575171cd88e98d72b0f9f6e8b71f7375c8f61fdee57fba366e6b6b2a17492019f0af8a9e10688b47ed5fdff36573c89ca3762c
+                  source: 'salt://misc/jenkins-1.625.2.war'
+                  source_hash: sha512=61370041af2ad0dc5140c59fba6163695c48fda2352b6d02b2366bb3b53b131d62f3c0d7be47b75eaa86ef000bff1021f3480f5719a069db7804a2b9042087ef
 tomcat-manager:
   user: tomcat-salt
   passwd: tomcat-salt-user-password42
